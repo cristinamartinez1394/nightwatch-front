@@ -36,16 +36,17 @@ module.exports = {
   test_workers: {
     enabled: true
   },
-
+  
   test_settings: {
     default: {
-      disable_error_log: false,
+      disable_error_log: true,
       launch_url: 'http://localhost',
 
       screenshots: {
-        enabled: false,
-        path: 'screens',
-        on_failure: true
+        enabled: true,
+        path: 'tests_output/screenshots',
+        on_failure: true,
+        on_errors:true,
       },
 
       desiredCapabilities: {
